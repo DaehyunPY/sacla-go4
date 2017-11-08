@@ -1,0 +1,19 @@
+/** \mainpage GENERiC source code documentation
+
+\tableofcontents
+
+\section <steps> The analysis steps of GENERiC
+	\subsection <stepExtract>
+	
+	\subsection <stepUnpack>
+	
+	\subsection <stepCalc>
+	
+	\subsection <stepFinish>
+
+\section <useful> Useful functions
+
+\section <pointvector> Point vector classes
+
+
+*/

@@ -1,0 +1,12 @@
+//----------------------------------------------------------------
+//		GENERiC Analysis routine for reaction microscopes
+//		v. 1.5
+//
+//		Closing part for the automatically generated Go4UserAnalysisLinkDef.h
+//
+//		In some cases, i.e. if template class specializations are used in the code
+//		it might be necessary to add pragma links here or in the opening part
+//----------------------------------------------------------------
+
+
+#endif

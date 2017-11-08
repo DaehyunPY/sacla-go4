@@ -1,0 +1,81 @@
+//----------------------------------------------------------------
+//		GENERiC Analysis routine for reaction microscopes
+//		v. 1.5
+//
+//		This file has to contain a "pragma link" for each defined_in "defined in the program
+//----------------------------------------------------------------
+
+#ifdef __CINT__
+
+#pragma link off all globals;
+#pragma link off all classes;
+#pragma link off all functions;
+#pragma link C++ nestedclasses;
+
+#pragma link C++ class TRemiPoint<Double_t,2>+;
+#pragma link C++ class TRemiPoint<Double_t,3>+;
+
+#pragma link C++ defined_in "Core/TRemiAnalysis.h";
+#pragma link C++ defined_in "Core/TRemiEventElement.h";
+#pragma link C++ defined_in "Core/TRemiIncludeFunctions.h";
+#pragma link C++ defined_in "Core/HistExport/TRemiHistExport.h";
+#pragma link C++ defined_in "StepExtractAcq/TRemiAcqirisEventSource.h";
+#pragma link C++ defined_in "StepExtractAcq/TRemiAcqirisEvent.h";
+#pragma link C++ defined_in "StepExtractAcq/TRemiAcqirisPeak.h";
+#pragma link C++ defined_in "StepExtractAcq/TRemiAcqirisPuls.h";
+#pragma link C++ defined_in "StepExtractAcq/TRemiAcqirisChannel.h";
+#pragma link C++ defined_in "StepExtractAcq/TRemiAcqirisArchive.h";
+#pragma link C++ defined_in "StepExtractAcq/TRemiAcqirisSoftTdc.h";
+#pragma link C++ defined_in "StepExtractAcq/TRemiAcqirisSoftAdc.h";
+#pragma link C++ defined_in "StepExtractAcq/TRemiExtractAcqProc.h";
+#pragma link C++ defined_in "StepExtractMbs/TRemiExtractMbsProc.h";
+#pragma link C++ defined_in "EventElement/TRemiExtractEvent.h";
+#pragma link C++ defined_in "EventElement/TRemiUnpackEvent.h";
+#pragma link C++ defined_in "StepUnpack/TRemiUnpackProc.h";
+#pragma link C++ defined_in "StepUnpack/TRemiUnpackProcTof.h";
+#pragma link C++ defined_in "StepUnpack/TRemiUnpackProcPos.h";
+#pragma link C++ defined_in "StepUnpack/TRemiUnpackProcHexAnode.h";
+#pragma link C++ defined_in "StepUnpack/TRemiUnpackProcHexAnodeHole.h";
+#pragma link C++ defined_in "StepUnpack/TRemiUnpackProcDelayline.h";
+#pragma link C++ defined_in "StepUnpack/TRemiUnpackProcWaSAnode.h";
+#pragma link C++ defined_in "StepUnpack/TRemiUnpackProcReconstruct.h";
+#pragma link C++ defined_in "StepUnpack/TRemiUnpackProcTac.h";
+#pragma link C++ defined_in "StepUnpack/TRemiUnpackProcDelay.h";
+#pragma link C++ defined_in "EventElement/TRemiCalcEvent.h";
+#pragma link C++ defined_in "StepCalc/TRemiCalcProc.h";
+#pragma link C++ defined_in "StepCalc/TRemiCalcProcMomentum.h";
+#pragma link C++ defined_in "StepCalc/TRemiCalcProcDiss.h";
+#pragma link C++ defined_in "StepCalc/TRemiCalcProcSumSpectra.h";
+#pragma link C++ defined_in "EventElement/TRemiFinishEvent.h";
+#pragma link C++ defined_in "StepFinish/TRemiFinishProc.h";
+#pragma link C++ defined_in "Core/TRemiBasicParameter.h";
+#pragma link C++ defined_in "StepExtractAcq/Parameters/TRemiAcqirisCfdParameter.h";
+#pragma link C++ defined_in "StepExtractAcq/Parameters/TRemiAcqirisRisEParameter.h";
+#pragma link C++ defined_in "StepExtractAcq/Parameters/TRemiAcqirisSingleShotParameter.h";
+#pragma link C++ defined_in "StepUnpack/Parameters/TRemiDelayParameter.h";
+#pragma link C++ defined_in "StepUnpack/Parameters/TRemiDelaylineParameter.h";
+#pragma link C++ defined_in "StepUnpack/Parameters/TRemiHexAnodeParameter.h";
+#pragma link C++ defined_in "StepUnpack/Parameters/TRemiHexAnodeHoleParameter.h";
+#pragma link C++ defined_in "StepUnpack/Parameters/TRemiReconstructParameter.h";
+#pragma link C++ defined_in "StepUnpack/Parameters/TRemiWaSParameter.h";
+#pragma link C++ defined_in "StepUnpack/Parameters/TRemiTacParameter.h";
+#pragma link C++ defined_in "StepFinish/Parameters/TRemiFinishParameter.h";
+#pragma link C++ defined_in "Core/HistExport/TRemiHistExportParameter.h";
+#pragma link C++ defined_in "StepUnpack/Parameters/TRemiUnpackParameter.h";
+#pragma link C++ defined_in "StepCalc/Parameters/TRemiCalcParameter.h";
+#pragma link C++ defined_in "StepCalc/Parameters/TRemiMomentumParameter.h";
+#pragma link C++ defined_in "StepCalc/Parameters/TRemiDissociationParameter.h";
+#pragma link C++ defined_in "Core/RootMod/TH2Fsmooth.h";
+#pragma link C++ defined_in "Core/Point/TRemiPoint.h";
+#pragma link C++ defined_in "Core/Point/TRemiXY.h";
+#pragma link C++ defined_in "Core/Point/TRemiPxyz.h";
+#pragma link C++ defined_in "Core/Extern/Gnuplot.h";
+#pragma link C++ defined_in "Core/Extern/ConfigFile.h";
+
+#endif
+
+
+
+
+//----------------------------END OF GO4 SOURCE FILE ---------------------
+

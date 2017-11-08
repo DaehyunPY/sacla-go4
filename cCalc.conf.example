@@ -1,0 +1,203 @@
+##########################################
+# Configuration file for Analysis step for dissociation
+#
+# Conventions: 
+# - All angles are expected to be in degrees
+# - All energies are expected to be in eV
+# - All momenta are expected in a.u.
+# - Properties containing "bins" or "num" are usually integers
+# - Min. and max. values of histograms are usually doubles
+# - Properties containing "use" are usually boolean
+
+calc_parname_global = Par analysis global		# name for global analysis parameter
+
+use_conpar_online = false		# Read conpar_online.C macro at init
+
+calc_hist_num_bins = 20		# Range for histograms showing numbers, i.e. no. of particles, no. of coincidences
+
+################
+## Vector of polarization axis 
+calc_polarization_x = 1
+calc_polarization_y = 0
+calc_polarization_z = 0
+
+#########
+## ion properties
+
+calc_ions_shortname = i		# Short name to identify ions in folders and internal object names
+calc_ions_longname = ion		# Long name to identify ions in object titles
+calc_ions_massfactor = 1822.89		# Mass factor between ion mass unit and atomic units
+calc_ions_acceldirection = 1		# Direction of acceleration with respect to z axis: +1 is acceleration to +z, -1 acceleration to -z
+
+# Initialisation of different ion species
+calc_ions_num_species = 6		# number of ion species to analyse
+
+calc_ions_species_0_shortname = Ne+		# Short name to identify species in spectra names and in coincidences
+calc_ions_species_0_longname = Neon 1 plus		# Long name for descriptive texts
+calc_ions_species_0_mass = 20		# Ion mass in amu
+calc_ions_species_0_charge = 1		# Ion charge
+
+calc_ions_species_1_shortname = Ne++		# Short name to identify species in spectra names and in coincidences
+calc_ions_species_1_longname = Ne 2 plus		# Long name for descriptive texts
+calc_ions_species_1_mass = 20		# Ion mass in amu
+calc_ions_species_1_charge = 2		# Ion charge
+
+calc_ions_species_2_shortname = NeCoul+		# Short name to identify species in spectra names and in coincidences
+calc_ions_species_2_longname = Neon 1 plus Coulomb		# Long name for descriptive texts
+calc_ions_species_2_mass = 20		# Ion mass in amu
+calc_ions_species_2_charge = 1		# Ion charge
+
+calc_ions_species_3_shortname = N+		# Short name to identify species in spectra names and in coincidences
+calc_ions_species_3_longname = Nitrogen 1 plus Coulomb		# Long name for descriptive texts
+calc_ions_species_3_mass = 14		# Ion mass in amu
+calc_ions_species_3_charge = 1		# Ion charge
+
+
+# Ion spectra
+calc_ions_hist_mom_min = -50		# minimum ion momentum to plot
+calc_ions_hist_mom_max = 50		# maximum ion momentum to plot
+calc_ions_hist_mom_bins = 500		# number of bins for ion momentum plots
+
+calc_ions_hist_energy_min = 0		# minimm energy to plot
+calc_ions_hist_energy_max = 10		# maximum energy to plots
+calc_ions_hist_energy_bins = 100		# number of bins for energy plots
+
+calc_ions_hist_theta_min = 0		# Minimum for polar angle plots (range is 0 to 180 degrees)
+calc_ions_hist_theta_max = 180		# Maximum for polar angle plots (range is 0 to 180 degrees)
+calc_ions_hist_theta_bins = 80		# Number of bins for polar angle plots (range is 0 to 180 degrees)
+calc_ions_hist_phi_bins = 120		# Number of bins for azimuthar angle plots (range is 0 to 360 degrees)
+
+calc_ions_hist_alpha_min = 0		# minimum alpha angle to plot for ions
+calc_ions_hist_alpha_max = .2		# maximum alpha angle to plot for ions
+calc_ions_hist_alpha_bins = 200		# number of bins for alpha angle plots for ions
+
+calc_ions_hist_tof_min = 0		# minimum ToF value to plot
+calc_ions_hist_tof_max = 10000		# maximum ToF value to plot
+calc_ions_hist_tof_bins = 10000		# number of bin for ToF plots
+
+calc_ions_hist_xy_min = -65		# minimun position (x or y) to plot
+calc_ions_hist_xy_max = 65		# maximun position (x or y) to plot
+calc_ions_hist_xy_bins = 260		# No. of bins per axis in position plots
+
+
+#########
+## electron properties
+calc_electrons_shortname = e		# Short name to identify electrons in folders and internal object names
+calc_electrons_longname = electron		# Long name to identify electrons in object titles
+calc_electrons_massfactor = 1		
+calc_electrons_acceldirection = -1		# Direction of acceleration with respect to z axis: +1 is acceleration to +z, -1 acceleration to -z
+
+# Initialisation of different electron classes
+calc_electrons_num_species = 2		# number of electron classes to analyse. Might be useful to have different classes if you want separate conditions i.e. for "fast" and "slow" electrons
+
+#calc_electrons_species_0_shortname = ele		# Short name to identify classes in spectra names and in coincidences
+#calc_electrons_species_0_longname = electron		# Long name for descriptive texts
+#calc_electrons_species_0_mass = 1		# Mass in au
+#calc_electrons_species_0_charge = 1		# Charge
+
+
+# electron spectra
+calc_electrons_hist_mom_min = -5		# minimum ion momentum to plot
+calc_electrons_hist_mom_max = 5		# maximum ion momentum to plot
+calc_electrons_hist_mom_bins = 500		# number of bins for ion momentum plots
+
+calc_electrons_hist_energy_min = 0		# minimum electron energy to plot
+calc_electrons_hist_energy_max = 200		# maximum electron energy to plot
+calc_electrons_hist_energy_bins = 200		# number of bins for electron energy plots
+
+calc_electrons_hist_theta_bins = 80		# Number of bins for polar angle plots (range is 0 to 180 degrees)
+calc_electrons_hist_phi_bins = 120		# Number of bins for azimuthar angle plots (range is 0 to 360 degrees)
+
+calc_electrons_hist_alpha_min = 0		# minimum alpha angle to plot for electrons
+calc_electrons_hist_alpha_max = 10		# maximum alpha angle to plot for electrons
+calc_electrons_hist_alpha_bins = 500		# number of bins for alpha angle plots for electrons
+
+calc_electrons_hist_tof_min = 0		# minimum ToF value to plot
+calc_electrons_hist_tof_max = 500		# maximum ToF value to plot
+calc_electrons_hist_tof_bins = 1000		# number of bin for ToF plots
+
+calc_electrons_hist_xy_min = -45		# minimun position (x or y) to plot
+calc_electrons_hist_xy_max = 45		# maximun position (x or y) to plot
+calc_electrons_hist_xy_bins = 180		# No. of bins per axis in position plots
+
+
+
+### Delay stage properties
+
+calc_use_delay = true		# Was a delay stage used in the measurement?
+
+calc_delay_symmetric = false		# Was the delay symmetric with respect to zero?
+
+calc_hist_delay_min = -1020		# Minimum value to plot in delay histograms
+calc_hist_delay_max = 220		# Maximum value to plot in delay histograms
+calc_hist_delay_bins = 1040		# No. of bins in delay histograms
+
+
+### Intensity properties
+calc_hist_intensity_min = 0
+calc_hist_intensity_max = 100
+calc_hist_intensity_bins = 1000
+
+
+### Mininbunch index properties
+
+calc_hist_mbindex_max = 50		# Maximum value to plot and No. of bins in minibunch index histograms
+
+
+################
+# Coincidence properties
+
+calc_num_coincidences = 6		# No. of coincidences to analysed
+
+calc_coinc_0_shortname = NeCoulNeCoul		# Short name of coincidence
+calc_coinc_0_longname = Ne^+ and Ne^+		# long name (description) of coincidence
+calc_coinc_0_num_particles = 2		# No. of particles in this coincidence
+calc_coinc_0_particle_0_shortname = NeCoul+		# short name used for particle in momentum calculator
+calc_coinc_0_particle_1_shortname = NeCoul+		# short name used for particle in momentum calculator
+
+calc_coinc_1_shortname = Nee		# Short name of coincidence
+calc_coinc_1_longname = Ne^+ and electron		# long name (description) of coincidence
+calc_coinc_1_num_particles = 2		# No. of particles in this coincidence
+calc_coinc_1_particle_0_shortname = Ne+		# short name used for particle in momentum calculator
+calc_coinc_1_particle_1_shortname = ele		# short name used for particle in momentum calculator
+
+calc_coinc_2_shortname = NN		# Short name of coincidence
+calc_coinc_2_longname = N^+ and N^+		# long name (description) of coincidence
+calc_coinc_2_num_particles = 2		# No. of particles in this coincidence
+calc_coinc_2_particle_0_shortname = N+		# short name used for particle in momentum calculator
+calc_coinc_2_particle_1_shortname = N+		# short name used for particle in momentum calculator
+
+calc_coinc_3_shortname = Ne		# Short name of coincidence
+calc_coinc_3_longname = N^+ and electron		# long name (description) of coincidence
+calc_coinc_3_num_particles = 2		# No. of particles in this coincidence
+calc_coinc_3_particle_0_shortname = N+		# short name used for particle in momentum calculator
+calc_coinc_3_particle_1_shortname = ele		# short name used for particle in momentum calculator
+
+
+
+# sum spectra properties
+calc_hist_psum_min = -10		# minium values to plot for momentum sums
+calc_hist_psum_max = 10		# maximum value to plot for momentum sums
+calc_hist_psum_bins = 500		# number of bins for momentum sum plots
+
+calc_hist_esum_min = -0		# minium values to plot for energy sums (KER)
+calc_hist_esum_max = 100		# maximum value to plot for energy sums (KER)
+calc_hist_esum_bins = 100		# number of bins for energy sum plots (KER)
+
+calc_coinc_hist_newton_min = -3		# minimum value to plot in Newton diagrams for 3-particle break-ups
+calc_coinc_hist_newton_max = 3		# maximum value to plot in Newton diagrams for 3-particle break-ups
+calc_coinc_hist_newton_bins = 60		# No. of bins in Newton diagrams for 3-particle break-ups
+
+
+
+################
+# Definition of output particles and coincidences for this step
+
+calc_output_num_species = 1		# No. of non-coincident particle species to pass to the Finish step
+
+calc_output_species_0_shortname = Ne+		# Shortname of particle to pass. This shortname has to be declared above
+
+
+calc_output_num_coincidences = 1		# No. of coincidence channels to pass to the Finish step
+
+calc_output_coincidence_0_shortname = Nee		# Shortname of coincidence to pass. This shortname has to be declared above

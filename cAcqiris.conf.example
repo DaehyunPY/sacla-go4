@@ -1,0 +1,217 @@
+
+acq_padding_present = false 		# true for data with the 64bit data stream padding, false without
+acq_timestamp_present = false 		# true for data with timestamp, false without
+acq_bunchiddirect_present = false	# true for data with bunchIDdirect, false without
+acq_bunchid_present = false		# true for data with bunchID, false without
+acq_ppdelay_present	= false		# true for data with external PPdelay, false without
+acq_ppdelay_enc_present	= false		# true for data with external PPdelay from decoder, false without
+acq_crosscorr_present = false		# true for data with cross-correlator signal, false without
+acq_streakcam_present = false		# true for data with average streak cam signal, false without
+acq_streakcam_fast_present = false	# true for data with fast streak cam signal, false without
+acq_bam_present = false			# true for data with BAM signal, false without
+acq_gmd_present = false			# true for data with GMD-signal, false without
+
+use_conpar_online = false		# Read conpar_online.C macro at init
+
+num_acq_chan = 16
+
+num_tdc_chan = 17
+num_tdc_hits = 1
+num_adc_chan = 17
+
+acq_reconnect_interval = 5000		# Reconnect interval in ms
+
+
+acq_adc_chan_mbindex = -1		# ADC channel to store the minibunch index of a single shot event
+acq_adc_chan_offset = -1		# ADC channel to store the time offset of the single shot event
+
+acq_adc_chan_eventid = 0		# ADC channel to store the ID of the complete pulse train event
+acq_adc_chan_bunchid = 1		# ADC channel to store the FLASH bunchID of the complete pulse train event
+acq_adc_chan_ppdelay = 2		# ADC channel to store the external pump-probe laser delay
+acq_adc_chan_crosscorr = 3		# ADC channel to store cross correlator
+acq_adc_chan_streakcam = 4		# ADC channel to store streakcam
+acq_adc_chan_streakcamfast = 5		# ADC channel to store streakcam	
+acq_adc_chan_bam = 6			# ADC channel to store bam
+acq_adc_chan_ppdelay_enc = 7		# ADC channel to store the external pump-probe laser delay from encoder
+
+
+acq_veto_histogram = TdcChan15		# Name of the histogram for drawing the veto condition
+
+
+acq_use_tdc_overviewmode = false		# Enable overview of TDC performance?
+
+acq_use_tdc_watchmode = false		# Enable watching of TDC performance?
+acq_tdc_watchmode_num_pulses = 9		# No. of pulses to watch
+acq_tdc_watchmode_num_columns = 3		# No. of columns to show
+#acq_tdc_watchmode_num_pulses_overlay = 20		# Number of pulses to show in overlay picture
+
+
+acq_use_adc_watchmode = false		# Enable watching of ADC performance?
+acq_adc_watchmode_num_pulses = 4		# No. of pulses to watch
+acq_adc_watchmode_num_columns = 2		# No. of columns to show
+
+acq_hist_tdc_raw_min = 0.		# Minimum value in Acqiris peaks raw spectra
+acq_hist_tdc_raw_max = 500000.		# Maximum value in Acqiris peaks raw spectra
+acq_hist_tdc_raw_bins = 2000000		# No. of bins in Acqiris peaks raw spectra
+
+acq_hist_adc_raw_min = -1000.		# Minimum value in Acqiris peaks raw spectra
+acq_hist_adc_raw_max = 100000.		# Maximum value in Acqiris peaks raw spectra
+acq_hist_adc_raw_bins = 10000		# No. of bins in Acqiris peaks raw spectra
+
+acq_hist_tdc_min = 0.		# Minimum value in TDC output spectra
+acq_hist_tdc_max = 10000.		# Maximum value in TDC output spectra
+acq_hist_tdc_bins = 10000		# No. of bins in TDC output spectra
+
+acq_hist_tdchits_min = 0.		# Minimum value in No. of TDC hits output spectra
+acq_hist_tdchits_max = 1000.		# Maximum value in No. of TDC hits output spectra
+acq_hist_tdchits_bins = 1000		# No. of bins in No. of TDC hits output spectra
+
+acq_hist_tdchits_mb_max = 1000		# Maximum value in No. of TDC hits per minibunch output spectra
+
+acq_hist_minibunch_max = 100		# Maximum number of minibunches to plot in histogram
+
+acq_hist_adc_min = -1000		# Minimum value in ADC output spectra
+acq_hist_adc_max = 100000.		# Maximum value in ADC output spectra
+acq_hist_adc_bins = 10000		# No. of bins in ADC output spectra
+
+
+# Set TDC methods for Acqiris channels. Options are:
+# - 0 : Do not apply Soft TDC
+# - 1 : Center-of-mass (CoM) method
+# - 2 : Constant fraction discriminator (CFD) method
+# - 3 : Constant fraction discriminator via Rising-Edge regression
+# - 4 : Root's SearchHighRes function
+# - 5 : Extrema via derivative
+# - 6 : Reversed CFD (from right to left)
+
+acq_chan_1_tdc_method = 2
+acq_chan_2_tdc_method = 2
+acq_chan_3_tdc_method = 2
+acq_chan_4_tdc_method = 2
+acq_chan_5_tdc_method = 2
+acq_chan_6_tdc_method = 2
+acq_chan_7_tdc_method = 2
+acq_chan_8_tdc_method = 2
+acq_chan_9_tdc_method = 2
+acq_chan_10_tdc_method = 2
+acq_chan_11_tdc_method = 2
+acq_chan_12_tdc_method = 2
+acq_chan_13_tdc_method = 2
+acq_chan_14_tdc_method = 2
+acq_chan_15_tdc_method = 2
+acq_chan_16_tdc_method = 0
+
+# Set ADC methods for Acqiris channels. Options are:
+# - 0 : Do not apply Soft ADC
+# - 1 : Integral over pulse
+# - 3 : Time value of first peak in pulse
+
+acq_chan_1_adc_method = 0
+acq_chan_2_adc_method = 0
+acq_chan_3_adc_method = 0
+acq_chan_4_adc_method = 0
+acq_chan_5_adc_method = 0
+acq_chan_6_adc_method = 0
+acq_chan_7_adc_method = 0
+acq_chan_8_adc_method = 0
+acq_chan_9_adc_method = 0
+acq_chan_10_adc_method = 0
+acq_chan_11_adc_method = 0
+acq_chan_12_adc_method = 3
+acq_chan_13_adc_method = 3
+acq_chan_14_adc_method = 0
+acq_chan_15_adc_method = 0
+acq_chan_16_adc_method = 1
+
+# Set the properties for each TDC channel
+tdc_chan_0_acq_channel = 0
+tdc_chan_0_acq_polarity = -1
+tdc_chan_0_use_veto = false 
+
+tdc_chan_1_acq_channel = 1
+tdc_chan_1_acq_polarity = -1
+tdc_chan_1_use_veto = false 		#true: Tdc_veto on, false: Tdc_veto off
+
+tdc_chan_2_acq_channel = 2
+tdc_chan_2_acq_polarity = -1
+tdc_chan_2_use_veto = true
+
+tdc_chan_3_acq_channel = 3
+tdc_chan_3_acq_polarity = -1
+tdc_chan_3_use_veto = true
+
+tdc_chan_4_acq_channel = 4
+tdc_chan_4_acq_polarity = -1
+tdc_chan_4_use_veto = true
+
+tdc_chan_5_acq_channel = 5
+tdc_chan_5_acq_polarity = -1
+tdc_chan_5_use_veto = true
+
+tdc_chan_6_acq_channel = 6
+tdc_chan_6_acq_polarity = -1
+tdc_chan_6_use_veto = true
+
+tdc_chan_7_acq_channel = 7
+tdc_chan_7_acq_polarity = -1
+tdc_chan_7_use_veto = true
+
+tdc_chan_8_acq_channel = 8
+tdc_chan_8_acq_polarity = -1
+tdc_chan_8_use_veto = true
+
+tdc_chan_9_acq_channel = 9
+tdc_chan_9_acq_polarity = -1
+tdc_chan_9_use_veto = true
+
+tdc_chan_10_acq_channel = 10
+tdc_chan_10_acq_polarity = -1
+tdc_chan_10_use_veto = true
+
+tdc_chan_11_acq_channel = 11
+tdc_chan_11_acq_polarity = -1
+tdc_chan_11_use_veto = true 		#false: Tdc_veto on, false: Tdc_veto off
+
+tdc_chan_12_acq_channel = 12
+tdc_chan_12_acq_polarity = -1
+tdc_chan_12_use_veto = true
+
+tdc_chan_13_acq_channel = 13
+tdc_chan_13_acq_polarity = -1
+tdc_chan_13_use_veto = false
+
+tdc_chan_14_acq_channel = 14
+tdc_chan_14_acq_polarity = -1
+tdc_chan_14_use_veto = false
+
+tdc_chan_15_acq_channel = 15
+tdc_chan_15_acq_polarity = -1
+tdc_chan_15_use_veto = false
+
+tdc_chan_16_acq_channel = 16
+tdc_chan_16_acq_polarity = -1
+tdc_chan_16_use_veto = false
+
+# Set the properties for each ADC channel
+# per_minibunch = false will determine the ADC value in the timewindow of each minibunch separately
+# per_minibunch = false will determine the ADC value from the complete channel i.e. will be the same for all minibunches
+# which_pulse sets which pulses are to be included in the chosen time window (current minibunch or full event): options are: 1 for first pulse, -1 for last pulse and 0 for all pulses
+adc_chan_10_acq_channel = 10
+adc_chan_10_per_minibunch = false
+adc_chan_10_which_pulse = 1
+
+adc_chan_11_acq_channel = 11
+adc_chan_11_per_minibunch = false
+adc_chan_11_which_pulse = 0
+
+adc_chan_12_acq_channel = 12
+adc_chan_12_per_minibunch = false
+adc_chan_12_which_pulse = 0
+
+adc_chan_13_acq_channel = 13
+adc_chan_13_per_minibunch = false
+adc_chan_13_which_pulse = 0
+
+
+adc_chan_16_which_pulse = 1
+

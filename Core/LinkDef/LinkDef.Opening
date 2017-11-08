@@ -1,0 +1,21 @@
+//----------------------------------------------------------------
+//		GENERiC Analysis routine for reaction microscopes
+//		v. 1.5
+//
+//		Opening part for the automatically generated Go4UserAnalysisLinkDef.h
+//
+//		In some cases, i.e. if template class specializations are used in the code
+//		it might be necessary to add pragma links here or in the closing part
+//----------------------------------------------------------------
+
+#ifdef __CINT__
+
+#pragma link off all globals;
+#pragma link off all classes;
+#pragma link off all functions;
+#pragma link C++ nestedclasses;
+
+#pragma link C++ class TRemiPoint<Float_t,2>+;
+#pragma link C++ class TRemiPoint<Float_t,3>+;
+#pragma link C++ class vector<TRemiParticle*>::iterator>+; //this causes a warning from roocint -v (iterator has no Streamer()), is it needed? anyway, is the last '>' correct?
+#pragma link C++ class vector< vector<TRemiParticle*>::iterator >+;
