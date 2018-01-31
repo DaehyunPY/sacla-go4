@@ -1,4 +1,4 @@
-// Exported 2017-11-08 14:58:40
+// Exported 2017-11-13 11:13:28
 
 #include "ConPar.Ch"
 
@@ -70,22 +70,20 @@ Bool_t conpar_online()
 
 	SetWindowCondition("Tdc_veto", 0, 0, 0, 0);
 	SetWindowCondition("c_Tof_e_all", 0, 500, 0, 0);
-	SetWindowCondition("c_Tof_i_all", 0, 500, 0, 0);
+	SetWindowCondition("c_Tof_i_all", -8.20064, 5896.2, 0, 0);
 
-	x[0] = -22.2419;	y[0] = 7.90816;
-	x[1] = -18.4464;	y[1] = 18.1122;
-	x[2] = -21.4828;	y[2] = -0.127551;
-	x[3] = -1.89777;	y[3] = -24.1071;
-	x[4] = 17.3836;	y[4] = -0.127551;
-	x[5] = 7.81883;	y[5] = 19.898;
-	x[6] = -22.2419;	y[6] = 7.90816;
-	SetPolyCondition("cXY_i_sort", 7, x, y, 0, 0);
+	x[0] = -3.52693;	y[0] = 1.08521;
+	x[1] = -3.61736;	y[1] = -2.44172;
+	x[2] = 0.994775;	y[2] = -3.34606;
+	x[3] = 3.25563;	y[3] = 0.813907;
+	x[4] = -3.52693;	y[4] = 1.08521;
+	SetPolyCondition("cXY_i_sort", 5, x, y, 0, 0);
 
 	SetWindowCondition("c_Rad_i", 0, 65, 0, 0);
 	SetWindowCondition("c_Y_i_sort", -65, 65, 0, 0);
-	SetWindowCondition("c_Tsum_ui", 59.3274, 73.4212, 0, 0);
-	SetWindowCondition("c_Tsum_vi", 67.2469, 78.6168, 0, 0);
-	SetWindowCondition("c_Tsum_wi", 67.0721, 79.3871, 0, 0);
+	SetWindowCondition("c_Tsum_ui", 71.5461, 85.3618, 0, 0);
+	SetWindowCondition("c_Tsum_vi", 63.8445, 77.3619, 0, 0);
+	SetWindowCondition("c_Tsum_wi", 56.3676, 75.0189, 0, 0);
 	SetWindowCondition("c_Sort_ui1", -100, 900, 0, 0);
 	SetWindowCondition("c_Sort_ui2", -100, 900, 0, 0);
 	SetWindowCondition("c_Sort_vi1", -100, 900, 0, 0);
@@ -158,9 +156,9 @@ Bool_t conpar_online()
 	
 	DataMembers = OpenParameter ("ValueExample_parameters");
 		SetParameterMember (DataMembers, "mUpdate", "0");
-		SetParameterMember (DataMembers, "mSourceHist", "");
+		SetParameterMember (DataMembers, "mSourceHist", "McpHits_i");
 		SetParameterMember (DataMembers, "mPlotError", "0");
-		SetParameterMember (DataMembers, "mType", "0");
+		SetParameterMember (DataMembers, "mType", "1");
 		SetParameterMember (DataMembers, "mClear", "0");
 		SetParameterMember (DataMembers, "mClearInterval", "75000");
 		SetParameterMember (DataMembers, "mThreshold", "0");
@@ -169,7 +167,7 @@ Bool_t conpar_online()
 	
 	DataMembers = OpenParameter ("Par SingleShot");
 		SetParameterMember (DataMembers, "NumMinibunches", "1");
-		SetParameterMember (DataMembers, "MinibunchDistance", "5000");
+		SetParameterMember (DataMembers, "MinibunchDistance", "30000");
 		SetParameterMember (DataMembers, "Offset", "0");
 		SetParameterMember (DataMembers, "Overlap", "0");
 	SaveParameter (DataMembers, "Par SingleShot");
